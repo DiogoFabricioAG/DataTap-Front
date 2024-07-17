@@ -3,15 +3,15 @@
     <AyudaTextual mensaje="Busqueda"/>
     <section>
         <div>
-            <div class="font-Bungee justify-end mx-3 mt-4 space-x-1 flex items-center ">
-                <button @click="restar_pagina" class="bg-white rounded-lg border border-black"><AtrasIcono/></button>
-                <span class="text-xl ">{{pagina}}</span>
-                <button @click="subir_pagina"  class="bg-white rounded-lg border border-black"><SiguienteIcono/></button>
-            </div>
             <div class="grid lg:grid-cols-2">
                 <VisualizadorComponente  usuario="Diogo Abregu" fecha="18/06/2022" genero="Salud" titulo="Encuesta sobre la Salud Mental" detalle="Tengo una curiosidad muy curiosa" imagen="https://concepto.de/wp-content/uploads/2013/08/salud-OMS-e1551914081412.jpg"/>
                 <VisualizadorComponente  usuario="Diogo Abregu" fecha="18/06/2022" genero="Salud" titulo="Encuesta sobre la Salud Mental" detalle="Tengo una curiosidad muy curiosa" imagen="https://concepto.de/wp-content/uploads/2013/08/salud-OMS-e1551914081412.jpg"/>
             </div>
+        </div>
+        <div class="font-Bungee justify-center mx-3 mt-4 space-x-1 flex items-center ">
+            <button @click="restar_pagina" class="bg-white rounded-lg border border-black"><AtrasIcono/></button>
+            <span class="text-xl ">{{pagina}}</span>
+            <button @click="subir_pagina"  class="bg-white rounded-lg border border-black"><SiguienteIcono/></button>
         </div>
     </section>
     

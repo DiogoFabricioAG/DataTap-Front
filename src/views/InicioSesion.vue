@@ -1,17 +1,18 @@
 <template>
   <main>
-    <div class="absolute bg-beige top-[20%] left-[16%] h-[60%] w-[68%] flex">
-      <img src="../assets/fotos.jpg" alt="Imagen">
+    <div class="absolute bg-beige lg:top-[20%] lg:left-[16%] lg:h-[60%] lg:w-[68%] h-[70%] top-[15%] left-[10%] w-[80%] flex flex-col lg:flex-row">
+      <img class="h-[50%] lg:h-full " src="../assets/fotos.jpg" alt="Imagen">
       <div class="w-full text-center mt-4 flex flex-col justify-between">
         <h2 class="font-Afacad my-4 text-xl">INICIAR SESION</h2>
         <form class="mt-5 font-Teachers text-sm" action="." @submit.prevent="console.log(1);" method="post">
           
-          <div class="grid grid-cols-2 w-4/5 space-x-5 mx-auto ">
+          <div class="grid grid-cols-1 w-4/5 space-x-5 mx-auto ">
             <input type="text" placeholder="Nombre de Usuario" class="shadow-md focus:ring-[2px] px-2 py-1 border outline-none duration-150 ease-in-out transition-all rounded-md focus:ring-purple-400">
+          </div>
+          <div class="grid grid-cols-1 w-4/5 my-3 space-x-5 mx-auto ">
             <input type="password" placeholder="Contraseña" class="shadow-md focus:ring-[2px] px-2 py-1 border outline-none duration-150 ease-in-out transition-all rounded-md focus:ring-purple-400">
           </div>
-          <div class="grid grid-cols-2 w-4/5 my-3 space-x-5 mx-auto ">
-            <input type="text" placeholder="Alias" class="shadow-md focus:ring-[2px] px-2 py-1 border outline-none duration-150 ease-in-out transition-all rounded-md focus:ring-purple-400">
+          <div class="grid grid-cols-1 w-4/5 my-3 space-x-5 mx-auto ">
             <input type="email" placeholder="Correo Electronico" class="shadow-md focus:ring-[2px] px-2 py-1 border outline-none duration-150 ease-in-out transition-all rounded-md focus:ring-purple-400">
           </div>
           <div> 
