@@ -20,6 +20,11 @@ const router = createRouter({
       component: () => import('../views/EncuestaReview.vue')
     },
     {
+      path: '/estadistica/',
+      name: 'estadistica',
+      component: () => import('../views/PaginaEstadisticas.vue')
+    },
+    {
       path: '/crear/',
       name: 'crear',
       component: () => import('../views/ZonaCreacion.vue')

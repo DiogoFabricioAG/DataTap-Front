@@ -9,7 +9,7 @@
             </button>
             <div :class="{'scale-90': is_open }"  class="absolute w-44 mt-8 lg:mt-1 text-sm font-Teachers transition-all scale-0 ease-in-out duration-100 border right-5  flex flex-col bg-white border-black my-2">
                 <router-link :to="{name:'control'}" href="#" class="hover:bg-slate-200">Creaciones</router-link>
-                <a href="#" class="hover:bg-slate-200">Estadisticas</a>
+                <router-link :to="{name: 'estadistica'}" href="#" class="hover:bg-slate-200">Estadisticas</router-link>
                 <a href="#" class="hover:bg-slate-200">Edicion de Perfil</a>
                 <a href="#" class="hover:bg-slate-200">Creditos</a>
                 <router-link :to="{name:'login'}" href="#" class="hover:bg-red-100">Cerrar Sesion</router-link>
@@ -50,46 +50,46 @@
     </main>
     </template>
     
-    <script>
-    import HeaderComponent from "@/components/HeaderComponent.vue"
-    import AyudaTextual from "@/components/AyudaTextual.vue"
-    import TresLineasIcono from "@/components/icons/TresLineasIcono.vue"
-    
-    export default {
-        components: {
-            TresLineasIcono,
-            AyudaTextual,
-            HeaderComponent,
+<script>
+import HeaderComponent from "@/components/HeaderComponent.vue"
+import AyudaTextual from "@/components/AyudaTextual.vue"
+import TresLineasIcono from "@/components/icons/TresLineasIcono.vue"
+
+export default {
+    components: {
+        TresLineasIcono,
+        AyudaTextual,
+        HeaderComponent,
+    },
+    data() {
+        return {
+            is_open: false
+        }
+    },
+    methods: {
+        opening() {
+            this.is_open = !this.is_open
         },
-        data() {
-            return {
-                is_open: false
+        handleScroll() {
+            this.is_open = false
+        },
+        handleKey(event) {
+            // Agregar teclas de atajo
+            // Cerrar Componentes Pop ups
+            if (event.code === "Backslash") {
+                this.is_open = false;
+                
+                this.$refs.headerComponent.search_activated = false;
             }
-        },
-        methods: {
-            opening() {
-                this.is_open = !this.is_open
-            },
-            handleScroll() {
-                this.is_open = false
-            },
-            handleKey(event) {
-                // Agregar teclas de atajo
-                // Cerrar Componentes Pop ups
-                if (event.code === "KeyE") {
-                    this.is_open = false;
-                    this.$refs.headerComponent.search_activated = false;
-                }
-            }
-        },
-        created() {
-            window.addEventListener('scroll', this.handleScroll);
-            window.addEventListener("keypress", this.handleKey);
-        },
-        unmounted() {
-            window.removeEventListener('scroll', this.handleScroll);
-            window.removeEventListener("keypress", this.handleKey);
-        },
-    }
-    </script>
-    
+        }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener("keypress", this.handleKey);
+    },
+    unmounted() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener("keypress", this.handleKey);
+    },
+}
+</script>
