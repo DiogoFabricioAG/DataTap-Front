@@ -1,3 +1,5 @@
+import animations from '@midudev/tailwind-animations/src/theme'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -12,7 +14,8 @@ export default {
         Afacad: ['Afacad Variable', 'sans-serif'],
         Teachers: ['Teachers Variable', 'sans-serif']
       },
-    plugins: [],
+    plugins: [animations],
     
   }
+  
 }

@@ -4,6 +4,7 @@ import '@fontsource-variable/teachers'
 import '@fontsource/aclonica'
 import '@fontsource-variable/afacad'
 
+
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
