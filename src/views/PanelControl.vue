@@ -2,7 +2,7 @@
     <HeaderComponent/>
     <AyudaTextual mensaje="Zona de Control"/>
     <section>
-        <div class="relative overflow-x-auto shadow-md sm:rounded-lg m-2 lg:m-5 font-Teachers rounded-xl">
+        <div class="relative overflow-x-auto overflow-y-visible shadow-md sm:rounded-lg m-2 lg:m-5 font-Teachers rounded-xl">
             <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-transparent">
                 <div>
                     <button id="dropdownActionButton" @click="open_acordeon" data-dropdown-toggle="dropdownAction" class="inline-flex items-center text-gray-500 bg-slate-50 border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5" type="button">
@@ -13,20 +13,20 @@
                         </svg>
                     </button>
                     <!-- Dropdown menu -->
-                    <div id="dropdownAction" v-if="opening" class="z-10 bg-white divide-y absolute divide-gray-100 rounded-lg shadow w-44">
+                    <div id="dropdownAction" v-if="opening" class=" bg-white divide-y absolute z-10 divide-gray-100 rounded-lg shadow w-44">
                         <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownActionButton">
                             <li>
-                                <button @click="seleccionar_opcion('Premiar')" class="block px-4 py-2 hover:bg-gray-100">Reward</button>
+                                <button @click="seleccionar_opcion('Agregar Preguntas')" class="block px-4 py-2 hover:bg-gray-100">Agregar Preguntas</button>
                             </li>
                             <li>
-                                <button @click="seleccionar_opcion('Promover')" class="block px-4 py-2 hover:bg-gray-100  ">Promote</button>
+                                <button @click="seleccionar_opcion('Cambiar Estado')" class="block px-4 py-2 hover:bg-gray-100  ">Cambiar Estado</button>
                             </li>
                             <li>
-                                <button @click="seleccionar_opcion('Activar')" class="block px-4 py-2 hover:bg-gray-100  ">Activate account</button>
+                                <button @click="seleccionar_opcion('Pensando')" class="block px-4 py-2 hover:bg-gray-100  ">Pensando</button>
                             </li>
                         </ul>
                         <div class="py-1">
-                            <button @click="seleccionar_opcion('Eliminar Usuario')" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100   ">Delete User</button>
+                            <button @click="seleccionar_opcion('Editar')" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100   ">Editar</button>
                         </div>
                     </div>
                     <button class="px-2 py-1 mx-2 text-white rounded-md duration-100 hover:bg-green-400 ring-black  bg-green-500">Activar</button>
@@ -88,12 +88,35 @@
                             1290
                         </td>
                     </tr>
+                    <tr class="bg-slate-50 border-b  hover:bg-gray-50 ">
+                        <td class="w-4 p-4">
+                            <div class="flex items-center">
+                                <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
+                                <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                            </div>
+                        </td>
+                        <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap ">
+                            <div class="ps-3">
+                                <div class="text-base font-semibold">Salud Mental en los Muchachos</div>
+                                <div class="font-normal text-gray-500">Encuesta</div>
+                            </div>  
+                        </th>
+                        <td class="px-6 py-4">
+                            Salud
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center">
+                                <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div> Offline
+                            </div>
+                        </td>
+                        <td class="px-6 py-4">
+                            1290
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
         <PaginadorUtil ref="paginador"/>
-        {{ $refs.paginador }}
-        {{ $refs.paginador }}
     </section>
 </template>
 
@@ -117,7 +140,7 @@ export default {
     data() {
         return {
             opening : false,
-            accion: "Action",
+            accion: "-----",
         }
     },
 

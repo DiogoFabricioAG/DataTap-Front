@@ -39,7 +39,15 @@ const router = createRouter({
       name: 'control',
       component: () => import('../views/PanelControl.vue')
     },
+    {
+      path: '/agregar/',
+      name: 'agregar',
+      component: () => import('../views/AgregarPreguntas.vue')
+    },
   ]
 })
-
+router.beforeEach((to, from, next) => {
+  document.title = to.name;
+  next();
+});
 export default router

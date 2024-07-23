@@ -10,7 +10,7 @@
                     <VisualizadorSecComponente
                         @dragover="eventos"
                         @dragstart="selected('Titulo 2')"
-                        titulo="Estadistica Estadistica Estadistica Estadistica Estadistica EstadisticaEstadisticaEstadisticaEstadisticaEstadisticaEstadistica"
+                        titulo="Estadistica Estadistica Estadistica Estadistica Estadistica Estadistica Estadistica"
                         imagen="https://lastfm.freetls.fastly.net/i/u/ar0/f5f891ae1dcb08d3861b7b84f147de9d.jpg"
                     />
                     <VisualizadorSecComponente

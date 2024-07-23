@@ -31,7 +31,7 @@
         <div :class="{'scale-105':showInfoDialog}" class="font-Teachers fixed duration-100 scale-0 inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
             <div class="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full max-h-96 overflow-y-auto">
                 <div class="flex w-full items-center mb-2 justify-between">
-                    <h2 class="text-xl font-bold">Realiza tu comentario</h2>
+                    <h2 class="text-xl font-bold">Realiza tu comentario9</h2>
                     <button @click="closeInfoDialog" class="px-1 py-1 bg-gray-500 text-white rounded hover:bg-gray-600">
                         <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
                     </button>
