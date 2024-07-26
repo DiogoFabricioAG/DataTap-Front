@@ -44,6 +44,11 @@ const router = createRouter({
       name: 'agregar',
       component: () => import('../views/AgregarPreguntas.vue')
     },
+    {
+      path: '/creditos/',
+      name: 'creditos',
+      component: () => import('../views/PaginaCreditos.vue')
+    },
   ]
 })
 router.beforeEach((to, from, next) => {

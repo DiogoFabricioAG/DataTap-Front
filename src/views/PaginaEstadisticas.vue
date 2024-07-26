@@ -46,7 +46,7 @@
                     <div class="flex flex-col  items-center">
                         <span>Datos y Preguntas</span>
                         <div class="grid grid-cols-5 gap-1 mb-2">
-                            <button v-for="(item, index) in 10" :key="index" @click="seleccinar_preguntas(index+1)" :class="{'bg-yellow-700 hover:bg-yellow-500  select-none': numeros_seleccionados.includes(index+1), 'hover:bg-slate-400 bg-slate-300':!numeros_seleccionados.includes(index+1)}" class="size-10  duration-100 p-1 flex items-center justify-center ">{{ index +1 }}</button>
+                            <button v-for="(item, index) in 10" :key="index" @click="seleccinar_preguntas(index+1)" :class="{'bg-yellow-500 hover:bg-yellow-700  select-none': numeros_seleccionados.includes(index+1), 'hover:bg-slate-400 bg-slate-300':!numeros_seleccionados.includes(index+1)}" class="size-10  duration-100 p-1 flex items-center justify-center ">{{ index +1 }}</button>
                         </div>
                         <button class="bg-green-500 rounded outline-none text-white ring-black py-1 px-2 hover:bg-green-600 duration-150 focus:ring-2">Generar</button>
                     </div>

@@ -76,6 +76,7 @@ export default {
         handleKey(event) {
             // Agregar teclas de atajo
             // Cerrar Componentes Pop ups
+            console.log(event.code);
             if (event.code === "Backslash") {
                 this.is_open = false;
                 
